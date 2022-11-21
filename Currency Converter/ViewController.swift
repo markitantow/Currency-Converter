@@ -53,7 +53,7 @@ class ViewController: UIViewController {
             
             switch topCurrency {
             case "USD": if botCurrency == "ZLT" {
-                coef = 0.22
+                coef = 4.55
             } else if botCurrency == "BYN" {
                 coef = 2.41
             } else {
@@ -61,7 +61,7 @@ class ViewController: UIViewController {
             }
                 
             case "ZLT": if botCurrency == "USD" {
-                coef = 4.5588
+                coef = 0.22
             } else if botCurrency == "BYN" {
                 coef = 0.52
             } else {
@@ -79,7 +79,7 @@ class ViewController: UIViewController {
             }
             
             let result = coef * number
-            botLabel.text = String(result)
+            botLabel.text = String(Double(round(1000 * result) / 1000))
             botLabel.isHidden = false
         if topLabel.text != nil {
             topLabel.text! += " \(topCurrency)"
