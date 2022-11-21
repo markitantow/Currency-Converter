@@ -18,13 +18,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="XJ4-Ao-64r">
-                                <rect key="frame" x="0.0" y="0.0" width="402" height="852"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L51-lb-qpU">
-                                        <rect key="frame" x="0.0" y="0.0" width="402" height="426"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="426"/>
                                         <subviews>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="wwX-9C-rVN">
-                                                <rect key="frame" x="131" y="70" width="140" height="32"/>
+                                                <rect key="frame" x="131" y="70" width="131" height="32"/>
                                                 <color key="backgroundColor" red="0.42352941176470588" green="0.29019607843137252" blue="0.71372549019607845" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <segments>
                                                     <segment title="USD"/>
@@ -33,14 +33,17 @@
                                                 </segments>
                                                 <color key="tintColor" red="0.60789138080000005" green="0.1097165868" blue="0.12161641569999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="selectedSegmentTintColor" red="0.72545218469999995" green="0.87843960519999997" blue="0.99999040370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="changeTopSegment:" destination="BYZ-38-t0r" eventType="valueChanged" id="IHP-vp-UUc"/>
+                                                </connections>
                                             </segmentedControl>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yJC-g9-HhC">
-                                                <rect key="frame" x="131" y="116" width="140" height="34"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="yJC-g9-HhC">
+                                                <rect key="frame" x="131" y="116" width="131" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" textContentType="postal-code"/>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0r1-Vz-CpO">
-                                                <rect key="frame" x="142.66666666666666" y="183" width="116.66666666666666" height="60"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0r1-Vz-CpO">
+                                                <rect key="frame" x="138.33333333333334" y="183" width="116.66666666666666" height="60"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                 <color key="textColor" red="0.72549019607843135" green="0.8784313725490196" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -59,10 +62,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jTM-qm-ZZd">
-                                        <rect key="frame" x="0.0" y="426" width="402" height="426"/>
+                                        <rect key="frame" x="0.0" y="426" width="393" height="426"/>
                                         <subviews>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="vNw-oV-Mq1">
-                                                <rect key="frame" x="131" y="325" width="140" height="32"/>
+                                                <rect key="frame" x="131" y="325" width="131" height="32"/>
                                                 <color key="backgroundColor" red="0.55294117647058827" green="0.61960784313725492" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <segments>
                                                     <segment title="USD"/>
@@ -70,9 +73,12 @@
                                                     <segment title="BYN"/>
                                                 </segments>
                                                 <color key="selectedSegmentTintColor" red="0.55294117647058827" green="0.44705882352941173" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="changeBotSegment:" destination="BYZ-38-t0r" eventType="valueChanged" id="4hb-pl-iPO"/>
+                                                </connections>
                                             </segmentedControl>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iDN-I8-ZqE">
-                                                <rect key="frame" x="142.66666666666666" y="183" width="116.66666666666666" height="60"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" minimumFontSize="25" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iDN-I8-ZqE">
+                                                <rect key="frame" x="138.33333333333334" y="183" width="116.66666666666666" height="60"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                 <color key="textColor" red="0.55294117647058827" green="0.44705882352941173" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -121,11 +127,14 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Dsa-aE-gwM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EQc-ce-Zaz"/>
+                            <constraint firstItem="XJ4-Ao-64r" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Hqw-6e-KPg"/>
+                            <constraint firstItem="XJ4-Ao-64r" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="MkN-xP-Bkz"/>
                             <constraint firstItem="Dsa-aE-gwM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Np6-Xh-3Vk"/>
                             <constraint firstAttribute="bottom" secondItem="XJ4-Ao-64r" secondAttribute="bottom" id="Py5-X6-KE7"/>
+                            <constraint firstAttribute="bottom" secondItem="XJ4-Ao-64r" secondAttribute="bottom" id="Sbs-mP-e9f"/>
                             <constraint firstItem="XJ4-Ao-64r" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZiG-eT-oCQ"/>
                             <constraint firstItem="XJ4-Ao-64r" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="mNt-82-TOY"/>
+                            <constraint firstItem="XJ4-Ao-64r" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="qxF-3s-FWs"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XJ4-Ao-64r" secondAttribute="trailing" id="z7N-HX-JSk"/>
                         </constraints>
                     </view>
@@ -140,7 +149,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="130.53435114503816" y="-34.507042253521128"/>
+            <point key="canvasLocation" x="-454" y="-471"/>
         </scene>
     </scenes>
     <resources>
